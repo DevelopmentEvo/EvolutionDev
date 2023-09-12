@@ -1,67 +1,184 @@
-
 /* Style for circle on image */
+.image-container {
+    position: relative;
+}
+
+/* Circular text container style */
 .circle-text {
     width: 150px;
     height: 150px;
     background-color: rgba(43, 48, 53, 0.4);
     border-radius: 50%;
     position: absolute;
-    bottom: 90px;
-    /* Position from the bottom */
+    bottom: 50px; /* Adjust the bottom value as needed to position the circle */
     left: 50%;
-    /* Center horizontally */
     transform: translateX(-50%);
-    /* Center horizontally */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Text within the circular container */
 .circle-text p {
     color: #fff;
-	text-align: center;
+    text-align: center;
     font-size: 20px;
 }
 
+/* Style for lighter text */
 .font-weight-light {
     color: bisque;
 }
 
-/* Background color of container */
+/* Background color of the body */
 body {
     background-color: rgb(34, 41, 41);
 }
 
+/* Media query for screens smaller than 767px */
 @media (max-width: 767px) {
-		.carousel-inner .carousel-item > div {
-			display: none;
-		}
-		.carousel-inner .carousel-item > div:first-child {
-			display: block;
-		}
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+/* Styles for active and next/prev carousel items */
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* Media query for screens medium (768px) and larger */
+@media (min-width: 768px) {
+    /* Styles for active, next, and prev carousel items on medium and larger screens */
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+/* Reset transform for carousel items */
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+
+/* General styling */
+* {
+	box-sizing: border-box;
+}
+
+/* Columns for pricing section */
+.columns {
+	float: left;
+	width: 33.3%;
+	padding: 8px;
+}
+
+/* Styling for pricing elements */
+.price {
+	list-style-type: none;
+	border: 1px solid #eee;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+}
+
+/* Hover effect for pricing elements */
+.price:hover {
+	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+/* Header style for pricing elements */
+.price .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+/* Styling for individual pricing items */
+.price li {
+	border-bottom: 1px solid #eee;
+	padding: 20px;
+	text-align: center;
+}
+
+/* Styling for grey background pricing items */
+.price .grey {
+	background-color: #eee;
+	font-size: 20px;
+}
+
+/* Button style for pricing tables*/
+.button {
+	background-color: #04AA6D;
+	border: none;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+/* Style for the placeholder content */
+.placeholder-content {
+    background-color: #333; /* Background color for the placeholder */
+    color: #fff; /* Text color for the placeholder */
+    padding: 20px; /* Adjust the padding as needed */
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.projects-section {
+    padding: 40px 0; /* Add some spacing above and below the section */
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333; /* Adjust the color as needed */
+    margin-bottom: 20px;
+}
+
+.project {
+    background-color: #f9f9f9; /* Background color for each project section */
+    border: 1px solid #ddd; /* Border for each project section */
+    padding: 20px;
+    margin-bottom: 20px; /* Spacing between project sections */
+}
+
+.project h3 {
+    font-size: 20px;
+    color: #555; /* Adjust the color as needed */
+}
+
+.project p {
+    font-size: 16px;
+    color: #777; /* Adjust the color as needed */
+}
+
+/* Add hover effect for project sections (optional) */
+.project:hover {
+    background-color: #e9e9e9; /* Change background color on hover */
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Media query for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+	.columns {
+	  width: 100%;
 	}
-
-	.carousel-inner .carousel-item.active,
-	.carousel-inner .carousel-item-next,
-	.carousel-inner .carousel-item-prev {
-		display: flex;
-	}
-
-	/* medium and up screens */
-	@media (min-width: 768px) {
-
-		.carousel-inner .carousel-item-end.active,
-		.carousel-inner .carousel-item-next {
-			transform: translateX(25%);
-		}
-
-		.carousel-inner .carousel-item-start.active, 
-		.carousel-inner .carousel-item-prev {
-			transform: translateX(-25%);
-		}
-	}
-
-	.carousel-inner .carousel-item-end,
-	.carousel-inner .carousel-item-start { 
-		transform: translateX(0);
-	}
+}
