@@ -32,7 +32,12 @@
 
 /* Background color of the body */
 body {
-    background-color: rgb(34, 41, 41);
+    background-color: #2B3035 !important;
+}
+
+.container {
+	background-color: #fff !important;
+	
 }
 
 /* Media query for screens smaller than 767px */
@@ -70,76 +75,6 @@ body {
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
     transform: translateX(0);
-}
-
-/* General styling */
-* {
-	box-sizing: border-box;
-}
-
-/* Columns for pricing section */
-.columns {
-	float: left;
-	width: 33.3%;
-	padding: 8px;
-}
-
-/* Styling for pricing elements */
-.price {
-	list-style-type: none;
-	border: 1px solid #eee;
-	margin: 0;
-	padding: 0;
-	-webkit-transition: 0.3s;
-	transition: 0.3s;
-}
-
-/* Hover effect for pricing elements */
-.price:hover {
-	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
-}
-
-/* Header style for pricing elements */
-.price .header {
-	background-color: #111;
-	color: white;
-	font-size: 25px;
-}
-
-/* Styling for individual pricing items */
-.price li {
-	border-bottom: 1px solid #eee;
-	padding: 20px;
-	text-align: center;
-}
-
-/* Styling for grey background pricing items */
-.price .grey {
-	background-color: #eee;
-	font-size: 20px;
-}
-
-/* Button style for pricing tables*/
-.button {
-	background-color: #04AA6D;
-	border: none;
-	color: white;
-	padding: 10px 25px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 18px;
-}
-
-/* Style for the placeholder content */
-.placeholder-content {
-    background-color: #333; /* Background color for the placeholder */
-    color: #fff; /* Text color for the placeholder */
-    padding: 20px; /* Adjust the padding as needed */
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 .projects-section {
@@ -213,4 +148,32 @@ body {
 /* Add some top padding to the page content to prevent sudden quick movement */
 .sticky + .content {
     padding-top: 60px;
+}
+
+/* PRICING TABLE */
+.pricingColumns {
+	padding: 8px;
+}
+
+.pricing {
+	list-style-type: none;
+}
+
+.pricing .header {
+	background-color: #111;
+	color: white;
+	font-size: 25px;
+}
+
+.pricing .price {
+	color: #fff;
+	background-color: #2B3035;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.pricing li {
+	border-bottom: 1px solid #2B3035;
+	padding: 20px;
+	text-align: center;
 }
