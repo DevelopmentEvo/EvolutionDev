@@ -7,10 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Evolution Development</title>
 	<!-- Include CSS and JavaScript resources -->
-	<link href="./assets/css/style.css?2" rel="stylesheet">
+	<link href="./assets/css/style.css?3" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/7f455ee949.js" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
 </head>
 
 <body> <!-- Navigation Bar -->
@@ -34,10 +35,10 @@
 						<a class="nav-link active" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Pricing</a>
+						<a class="nav-link" href="#pricing">Pricing</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Our Work</a>
+						<a class="nav-link" href="#clients">Our Work</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Contact Us</a>
@@ -52,12 +53,12 @@
 		<img src="./assets/img/Tester.jpg" style="width: 100%; max-width: 100%;" height="800px" alt="Your Alt Text"
 			draggable="false">
 		<!-- Circular text container -->
-		<div class="circle-text">
+		<a href="#pricing" class="circle-text">
 			<p>
 				Learn more<br>
 				<i class="fa-regular fa-circle-down"></i>
 			</p>
-		</div>
+		</a>
 	</div>
 	<!-- Carousel Section -->
 	<div class="carouselContainer text-center my-3">
@@ -178,15 +179,20 @@
 			</div>
 		</div>
 	</div>
-	
-	<h2 style="color:#fff;text-align:center">Pricing</h2>
-	<p style="color:#fff;text-align:center">Our pricing options are just for you to get an idea of what we offer and how much it will cost.<br>Please contact us below to get an accurate quote for your website!</p>
-	<div class="container text-center">
+
+	<h2 style="color:#fff;text-align:center" id="pricing">Pricing</h2>
+	<p style="color:#fff;text-align:center">Our pricing options are just for you to get an idea of what we offer and how
+		much it will cost.<br>Please contact us below to get an accurate quote for your website!</p>
+	<!-- Pricing section container -->
+	<div class="container text-center rounded">
+		<!-- Row for pricing columns -->
 		<div class="row pricingColumns">
-			<div class="col">
-				<ul class="pricing">
+			<!-- Column for Basic pricing -->
+			<div class="col rounded">
+				<!-- Pricing details list -->
+				<ul class="pricing pricing-column">
 					<li class="header">Basic</li>
-					<li class="price">$100</li>
+					<li class="price rounded-bottom">$100</li>
 					<li>Hosted for you (FREE)</li>
 					<li>Unlimited Revisions</li>
 					<li>SEO Friendly</li>
@@ -194,10 +200,13 @@
 					<li>HTML/CSS/JS</li>
 				</ul>
 			</div>
-			<div class="col">
-				<ul class="pricing">
+
+			<!-- Column for Pro pricing -->
+			<div class="col rounded">
+				<!-- Pricing details list -->
+				<ul class="pricing pricing-column">
 					<li class="header">Pro</li>
-					<li class="price">$200</li>
+					<li class="price rounded-bottom">$200</li>
 					<li>Hosted for you ($20/mo.)</li>
 					<li>Unlimited Revisions</li>
 					<li>SEO Friendly</li>
@@ -205,10 +214,13 @@
 					<li>HTML/CSS/JS/PHP</li>
 				</ul>
 			</div>
-			<div class="col">
-				<ul class="pricing">
+
+			<!-- Column for Premium pricing -->
+			<div class="col rounded">
+				<!-- Pricing details list -->
+				<ul class="pricing pricing-column">
 					<li class="header">Premium</li>
-					<li class="price">$500</li>
+					<li class="price rounded-bottom">$500</li>
 					<li>Hosted for you ($20/mo.)</li>
 					<li>Unlimited Revisions</li>
 					<li>SEO Friendly</li>
@@ -217,39 +229,38 @@
 				</ul>
 			</div>
 		</div>
-		<div class="p-3 pricingContact">
+
+		<!-- Contact section -->
+		<div class="p-3 pricingContact rounded">
 			<h3 style="color:#fff">Contact us for an accurate quote!</h3>
 			<button type="button" class="btn btn-secondary">Contact now</button>
 		</div>
 		<br>
 	</div>
 	<br>
-	
-	<h2 style="color:#fff;text-align:center">Our Clients</h2>
+
+	<h2 style="color:#fff;text-align:center" id="clients">Our Clients</h2>
 	<p style="color:#fff;text-align:center">PlaceHolder</p>
-	<div class="container projects-section">
-
-		<!-- Project 1 -->
-		<div class="project">
-			<h3>RefreshGaming</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio itaque tempore,
-				consequatur culpa at tempora eaque officia, pariatur nam cumque quibusdam.
-				Ipsam sunt officiis harum molestiae blanditiis voluptatum saepe voluptates?
-			</p>
-			<!-- additional project content here -->
+	<div class="container projects-section rounded">
+		<!-- Project 1 - Full width -->
+		<div class="row">
+			<div class="col-12 project">
+				<h3>RefreshGaming</h3>
+				<iframe width="100%" height="900" src="https://refreshgaming.net/" frameborder="0"
+					allowfullscreen></iframe>
+				<!-- additional project content here -->
+			</div>
 		</div>
 
-		<!-- Project 2 -->
-		<div class="project">
-			<h3>Project 2</h3>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio itaque tempore,
-				consequatur culpa at tempora eaque officia, pariatur nam cumque quibusdam.
-				Ipsam sunt officiis harum molestiae blanditiis voluptatum saepe voluptates?
-			</p>
-			<!-- additional project content here -->
+		<!-- Project 2 --->
+		<div class="row">
+			<div class="col-md-6 project">
+				<h3>Project 2</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+				<!-- additional project content here -->
+			</div>
 		</div>
-
-		<!-- Add more project sections as needed -->
+		<!-- Add more project sections within rows as needed -->
 	</div>
 
 
@@ -274,7 +285,8 @@
 			}
 		})
 	</script>
-	
+
+
 </body>
 
 </html>
