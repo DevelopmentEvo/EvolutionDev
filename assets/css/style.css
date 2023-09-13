@@ -55,6 +55,18 @@ body {
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
     display: flex;
+	background-color: transparent;
+}
+
+.carouselContainer {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.carousel {
+	background-color: #2B3035;
+	border: solid white;
+	border-radius: 20px;
 }
 
 /* Media query for screens medium (768px) and larger */
@@ -75,6 +87,11 @@ body {
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
     transform: translateX(0);
+}
+
+.carousel-item .card {
+	background-color: transparent;
+	border: none !important;
 }
 
 .projects-section {
@@ -157,6 +174,10 @@ body {
 
 .pricing {
 	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
 }
 
 .pricing .header {
@@ -172,8 +193,16 @@ body {
 	font-weight: bolder;
 }
 
+.pricing:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.5)
+}
+
 .pricing li {
 	border-bottom: 1px solid #2B3035;
 	padding: 20px;
 	text-align: center;
+}
+
+.pricingContact {
+	background-color: #2B3035;
 }
