@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="./assets/css/contact.css?1" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://kit.fontawesome.com/7f455ee949.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- noUiSlider CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+</head>
+
+<body>
+
+    <div class="container border rounded p-4">
+        <form class="contact100-form validate-form">
+            <h2 class="mb-4 contact100-form-title text-center">Contact Us</h2>
+            <div class="mb-3">
+                <label for="name" class="form-label">FULL NAME *</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email *</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Number Phone">
+            </div>
+            <div class="mb-3">
+                <label for="service" class="form-label">Needed Services *</label>
+                <select class="form-select" id="service" name="service">
+                    <option>Please choose</option>
+                    <option value="webDevelopment">Web Development</option>
+                    <option value="hosting">Hosting</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3" id="productQuestion" style="display: none;">
+                <span class="form-label">What type of products do you sell?</span>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="type-product" id="physical" value="physical"
+                        checked>
+                    <label class="form-check-label" for="physical">Physical Products</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="type-product" id="digital" value="digital">
+                    <label class="form-check-label" for="digital">Digital Products</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="type-product" id="service-type"
+                        value="service">
+                    <label class="form-check-label" for="service-type">Services</label>
+                </div>
+            </div>
+            <div class="mb-3" id="textQuestion" style="display: none;">
+                <label class="form-label">Please provide more details:</label>
+                <textarea class="form-control" name="text-details" rows="4" placeholder="Enter details here"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Budget *</label>
+                <div id="budget-slider" class="form-control"></div>
+                <input type="hidden" id="budget" name="budget">
+                <div id="budget-amount" class="mt-2">$1500 - $3900</div>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message"
+                    placeholder="Your message here..."></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        const serviceSelect = document.getElementById('service');
+        const productQuestion = document.getElementById('productQuestion');
+        const textQuestion = document.getElementById('textQuestion');
+    
+        serviceSelect.addEventListener('change', function () {
+            if (this.value === 'webDevelopment') {
+                productQuestion.style.display = 'block';
+                textQuestion.style.display = 'none';
+            } else if (this.value === 'hosting' || this.value === 'other') {
+                productQuestion.style.display = 'none';
+                textQuestion.style.display = 'block';
+            } else {
+                productQuestion.style.display = 'none';
+                textQuestion.style.display = 'none';
+            }
+        });
+    </script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+    <script>
+        // Initialize the budget slider
+        var budgetSlider = document.getElementById('budget-slider');
+        var budgetInput = document.getElementById('budget');
+        var budgetAmount = document.getElementById('budget-amount');
+    
+        noUiSlider.create(budgetSlider, {
+            start: [100, 900],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 1000
+            },
+            step: 10
+        });
+    
+        // Update the hidden input field and budget amount when the slider values change
+        budgetSlider.noUiSlider.on('update', function (values, handle) {
+            budgetInput.value = values.join(',');
+            budgetAmount.textContent = '$' + values[0] + ' - $' + values[1];
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- Add any other contact details or information here -->
+</body>
+
+</html>
