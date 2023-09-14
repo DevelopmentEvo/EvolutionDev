@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Evolution Development</title>
 	<!-- Include CSS and JavaScript resources -->
-	<link href="./assets/css/style.css?4" rel="stylesheet">
+	<link href="./assets/css/style.css?3" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/7f455ee949.js" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -42,7 +42,7 @@
 						<a class="nav-link" href="#clients">Our Work</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact Us</a>
+						<a class="nav-link" href="contact.html">Contact Us</a>
 					</li>
 				</ul>
 			</div>
@@ -51,7 +51,7 @@
 	<!-- Main Content -->
 	<div class="image-container">
 		<!-- Background Image -->
-		<img src="./assets/img/Tester2.jpg" style="width: 100%; max-width: 100%;" height="1225px" alt="Your Alt Text"
+		<img src="./assets/img/Tester.jpg" style="width: 100%; max-width: 100%;" height="1360px" alt="Your Alt Text"
 			draggable="false">
 		<!-- Circular text container -->
 		<a href="#pricing" class="circle-text">
@@ -242,27 +242,35 @@
 
 	<h2 style="color:#fff;text-align:center" id="clients">Our Clients</h2>
 	<p style="color:#fff;text-align:center">PlaceHolder</p>
-	<div class="container projects-section rounded">
+	
 		<!-- Project 1 - Full width -->
-		<div class="row">
-			<div class="col-12 project">
-				<h3>RefreshGaming</h3>
-				<iframe width="100%" height="900" src="https://refreshgaming.net/" frameborder="0"
-					allowfullscreen></iframe>
-				<!-- additional project content here -->
+
+		<div class="container-fluid">
+			<div class="row" style="height: 100%;">
+				<div class="col-12 project position-relative">
+					<!-- Wrapping div for the h3 with padding -->
+					<div style="padding-bottom: 2%;">
+						<h3 style="font-size: 90px; border-bottom: 4px solid #000;">01.</h3>
+					</div>
+					<iframe src="https://chase88.net/" width="40%" height="820px" class="rounded"></iframe>
+					
+					<!-- additional project content here -->
+		
+					<!-- Separate container for the overlapping box, centered on the screen -->
+					<div class="position-absolute top-50 start-50 translate-middle p-3 rounded" 
+					style="width: 950px; height: 300px; margin-top: 6%; background-color: rgb(79, 83, 87); ">
+						<h4>Overlapping Box</h4>
+						<p>This is some overlapping text.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<!-- Project 2 --->
-		<div class="row">
-			<div class="col-md-6 project">
-				<h3>Project 2</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-				<!-- additional project content here -->
-			</div>
-		</div>
+
+	
+			<!-- Project 2 -->
 		<!-- Add more project sections within rows as needed -->
-	</div>
+	
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
