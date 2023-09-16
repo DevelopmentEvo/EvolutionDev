@@ -17,15 +17,15 @@
 <body>
 	<!-- Navigation Bar -->
 	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark" id="navbar"
-		style="border-bottom: solid white;">
+		style="border-bottom: solid 1px white;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand cta-button" href="#">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/d/df/IPhone_icon_aqua.png" alt="EvoDev"
 					width="30" height="30">
 				Evolution Development
 			</a>
 			<!-- Navbar Toggler -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			<button class="navbar-toggler " type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -34,16 +34,16 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
+						<a class="nav-link active cta-button" aria-current="page" href="#">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#pricing">Pricing</a>
+						<a class="nav-link cta-button" href="#pricing">Pricing</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#clients">Our Work</a>
+						<a class="nav-link cta-button" href="#clients">Our Work</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
+						<a class="nav-link cta-button" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
 					</li>
 				</ul>
 			</div>
@@ -241,7 +241,7 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body">
-						<!-- Add your contact form or content here -->
+
 						<!-- Example form -->
 						<form>
 							<div class="mb-3">
@@ -284,15 +284,21 @@
 	<div class="container-fluid">
 		<div class="row" style="height: 100%;">
 			<div class="col-12 project position-relative">
-				<!-- Wrapping div for the h3 with padding -->
-				<div style="padding-bottom: 2%;">
-					<h3 style="font-size: 90px; border-bottom: 4px solid #000;">01.</h3>
+				<!-- Project Number 1 -->
+				<!-- Project Content -->
+				<div class="project-content" style="display: flex; justify-content: space-evenly;">
+					<h3 style="font-size: 30px; font-weight: bold;">PORTFOLIO</h3>
+					<p style="font-weight: bold;">description of your project goes here.</p>
+					<a href="https://chase88.net/" target="_blank" class="cta-button">View Project</a>
 				</div>
-				<iframe src="https://chase88.net/" width="40%" height="820px" class="rounded"></iframe>
-
-				<!-- additional project content here -->
+	
+				<!-- Iframe Container -->
+				<div class="iframe-container">
+					<iframe src="https://chase88.net/" width="100%" height="1200px" class="rounded"></iframe>
+				</div>
 			</div>
 		</div>
+
 	</div>
 
 
