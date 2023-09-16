@@ -107,6 +107,13 @@ body {
     background-color: transparent;
     border: none !important;
 }
+.card-img{
+    max-width: 150px; /* Limit the image width to the container width */
+    max-height: 140px; /* Adjust the maximum height as needed */
+    display: flex; /* Ensures proper scaling of the image */
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
 
 .projects-section {
     padding: 40px 0;
