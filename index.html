@@ -7,16 +7,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Evolution Development</title>
 	<!-- Include CSS and JavaScript resources -->
-	<link href="./assets/css/style.css?3" rel="stylesheet">
+	<link href="./assets/css/style.css?4" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/7f455ee949.js" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
 </head>
 
-<body> 
+<body>
 	<!-- Navigation Bar -->
-	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark" id="navbar">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark fixed-top" data-bs-theme="dark" id="navbar"
+		style="border-bottom: solid white;">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
 				<img src="https://upload.wikimedia.org/wikipedia/commons/d/df/IPhone_icon_aqua.png" alt="EvoDev"
@@ -42,7 +43,7 @@
 						<a class="nav-link" href="#clients">Our Work</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact Us</a>
+						<a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</a>
 					</li>
 				</ul>
 			</div>
@@ -184,10 +185,10 @@
 	<h2 style="color:#fff;text-align:center" id="pricing">Pricing</h2>
 	<p style="color:#fff;text-align:center">Our pricing options are just for you to get an idea of what we offer and how
 		much it will cost.<br>Please contact us below to get an accurate quote for your website!</p>
-	<!-- Pricing section container -->
+		<!-- Pricing section container -->
 	<div class="container text-center rounded">
 		<!-- Row for pricing columns -->
-		<div class="row pricingColumns">
+		<div class="row pricingColumns" style="padding-top: 2%; padding-bottom: 2%;">
 			<!-- Column for Basic pricing -->
 			<div class="col rounded">
 				<!-- Pricing details list -->
@@ -231,10 +232,45 @@
 			</div>
 		</div>
 
-		<!-- Contact section -->
+		<!-- Contact section --> <!-- Modal -->
+		<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<!-- Add your contact form or content here -->
+						<!-- Example form -->
+						<form>
+							<div class="mb-3">
+								<label for="name" class="form-label">Name</label>
+								<input type="text" class="form-control" id="name" placeholder="Your Name">
+							</div>
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Your Email">
+							</div>
+							<div class="mb-3">
+								<label for="message" class="form-label">Message</label>
+								<textarea class="form-control" id="message" rows="4"
+									placeholder="Your Message"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="p-3 pricingContact rounded">
 			<h3 style="color:#fff">Contact us for an accurate quote!</h3>
-			<button type="button" class="btn btn-secondary">Contact now
+			<button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+				data-bs-target="#contactModal">Contact now</button>
 		</div>
 		<br>
 	</div>
@@ -242,28 +278,28 @@
 
 	<h2 style="color:#fff;text-align:center" id="clients">Our Clients</h2>
 	<p style="color:#fff;text-align:center">PlaceHolder</p>
-	
-		<!-- Project 1 - Full width -->
 
-		<div class="container-fluid">
-			<div class="row" style="height: 100%;">
-				<div class="col-12 project position-relative">
-					<!-- Wrapping div for the h3 with padding -->
-					<div style="padding-bottom: 2%;">
-						<h3 style="font-size: 90px; border-bottom: 4px solid #000;">01.</h3>
-					</div>
-					<iframe src="https://chase88.net/" width="40%" height="820px" class="rounded"></iframe>
-					
-					<!-- additional project content here -->
+	<!-- Project 1 - Full width -->
+
+	<div class="container-fluid">
+		<div class="row" style="height: 100%;">
+			<div class="col-12 project position-relative">
+				<!-- Wrapping div for the h3 with padding -->
+				<div style="padding-bottom: 2%;">
+					<h3 style="font-size: 90px; border-bottom: 4px solid #000;">01.</h3>
 				</div>
+				<iframe src="https://chase88.net/" width="40%" height="820px" class="rounded"></iframe>
+
+				<!-- additional project content here -->
 			</div>
 		</div>
+	</div>
 
 
-	
-			<!-- Project 2 -->
-		<!-- Add more project sections within rows as needed -->
-	
+
+	<!-- Project 2 -->
+	<!-- Add more project sections within rows as needed -->
+
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
