@@ -1,278 +1,328 @@
+#navbar {
+  overflow: hidden; 
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease; /* Add a smooth background color transition */
+  box-shadow: none; /* Remove any box shadow */
+}
+
+/* Navbar links */
+#navbar a {
+  color: white; /* Text color for the links */
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Change link color on hover */
+#navbar a:hover {
+  color: #060606; /* Adjust the hover color to match your brand */
+}
 /* Style for circle on image */
 .image-container {
-    position: relative;
+  position: relative; /* Specify your image path and properties here */
+  height: 100vh; /* Adjust the height as needed */
+}
+
+.centered-text {
+  border: 2px solid #000000; /* Example: Orange border */
+  border-radius: 10px;
+  position: absolute;
+  top: 30%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #4e4d4d; /* Text color */
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  text-decoration: none;
+  font-family: "Helvetica Neue", sans-serif; /* Choose your desired font-family */
+  font-size: 65px; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
 }
 
 /* Circular text container style */
 .circle-text {
-    width: 300px;
-    height: 300px;
-    background-color: rgba(43, 48, 53, 0.6);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 50px;
-    /* Adjust the bottom value as needed to position the circle */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(43, 48, 53, 0.6);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 90px;
+  /* Adjust the bottom value as needed to position the circle */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Change the background color on hover */
 .circle-text:hover {
-    background-color: rgba(43, 48, 53, 0.8);
+  background-color: rgba(43, 48, 53, 0.8);
 }
 
 /* Text within the circular container */
 .circle-text p {
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-    text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* Style for lighter text */
 .font-weight-light {
-    color: bisque;
+  color: bisque;
 }
 
 /* Background color of the body */
 body {
-    background-color: #2B3035 !important;
+  background-color: #2b3035 !important;
 }
 
 .container {
-    background-color: #fff !important;
-
+  background-color: #fff !important;
 }
 
 /* Media query for screens smaller than 767px */
 @media (max-width: 767px) {
-    .carousel-inner .carousel-item>div {
-        display: none;
-    }
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
 
-    .carousel-inner .carousel-item>div:first-child {
-        display: block;
-    }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
 
-    .project {
-        margin-bottom: 20px;
-    }
+  .project {
+    margin-bottom: 20px;
+  }
 }
 
 /* Styles for active and next/prev carousel items */
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
-    display: flex;
-    background-color: transparent;
+  display: flex;
+  background-color: transparent;
 }
 
 .carouselContainer {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .carousel {
-    background-color: #2B3035;
-    border: solid white;
-    border-radius: 20px;
+  background-color: #2b3035;
+  border: solid white;
+  border-radius: 20px;
 }
 
 /* Media query for screens medium (768px) and larger */
 @media (min-width: 768px) {
+  /* Styles for active, next, and prev carousel items on medium and larger screens */
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
 
-    /* Styles for active, next, and prev carousel items on medium and larger screens */
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
-    }
-
-    .carousel-inner .carousel-item-start.active,
-    .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
-    }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
 }
-
 
 /* Reset transform for carousel items */
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .carousel-item .card {
-    background-color: transparent;
-    border: none !important;
+  background-color: transparent;
+  border: none !important;
 }
-.card-img{
-    max-width: 150px; /* Limit the image width to the container width */
-    max-height: 140px; /* Adjust the maximum height as needed */
-    display: flex; /* Ensures proper scaling of the image */
-    margin: 0 auto;
-    justify-content: space-evenly;
+.card-img {
+  max-width: 150px; /* Limit the image width to the container width */
+  max-height: 140px; /* Adjust the maximum height as needed */
+  display: flex; /* Ensures proper scaling of the image */
+  margin: 0 auto;
+  justify-content: space-evenly;
 }
 
 .project {
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .project-number {
-    background-color: #333;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    border: 4px solid #000;
+  background-color: #333;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border: 4px solid #000;
 }
 
 .project-content {
-    margin-left: 100px;
-    text-align: left;
+  margin-left: 100px;
+  text-align: left;
 }
 
 .project-content h3 {
-    font-size: 32px;
-    margin-top: 0;
-    color: #333;
+  font-size: 32px;
+  margin-top: 0;
+  color: #333;
 }
 
 .project-content p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
-
-
-
 
 /* Iframe Container Styles */
 .iframe-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio for responsive iframe */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 aspect ratio for responsive iframe */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: none;
-    width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 50%;
 }
 
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 /* Media query for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
-    .columns {
-        width: 100%;
-    }
-}
-
-#navbar {
-    overflow: hidden;
-    background-color: #333;
-}
-
-/* Navbar links */
-#navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
+  .columns {
+    width: 100%;
+  }
 }
 
 /* Page content */
 .content {
-    padding: 16px;
+  padding: 16px;
 }
 
 /* PRICING TABLE ROW*/
 .pricingColumns {
-    padding: 8px;
+  padding: 8px;
 }
 
 /* PRICING TABLE Container*/
 .pricing-column {
-    border-radius: 10px;
-    /* Adjust the radius as needed */
-    overflow: hidden;
+  border-radius: 10px;
+  /* Adjust the radius as needed */
+  overflow: hidden;
 }
 
 .pricing {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .pricing .header {
-    background-color: #111;
-    color: white;
-    font-size: 25px;
+  background-color: #111;
+  color: white;
+  font-size: 25px;
 }
 
 .pricing .price {
-    color: #fff;
-    background-color: #2B3035;
-    font-size: 20px;
-    font-weight: bolder;
+  color: #fff;
+  background-color: #2b3035;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
 .pricing:hover {
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5)
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
 }
 
 .pricing li {
-    border-bottom: 1px solid #2B3035;
-    padding: 20px;
-    text-align: center;
+  border-bottom: 1px solid #2b3035;
+  padding: 20px;
+  text-align: center;
 }
 
 .pricingContact {
-    background-color: #2B3035;
+  background-color: #2b3035;
+}
+
+.extended-fade-in {
+  opacity: 0; /* Start with opacity set to 0 (completely transparent) */
+  animation: extendedFadeIn 3s ease-in-out forwards; /* Extend the animation duration to 3 seconds */
+}
+
+@keyframes extendedFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* End with opacity set to 1 (fully visible) */
+  }
+}
+
+
+.fade-in {
+  opacity: 0; /* Start with opacity set to 0 (completely transparent) */
+  animation: fadeIn 2s ease-in-out forwards; /* Define the animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; /* End with opacity set to 1 (fully visible) */
+  }
 }
