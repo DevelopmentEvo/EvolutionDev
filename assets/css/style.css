@@ -315,7 +315,7 @@ iframe {
 
 .fade-in {
   opacity: 0; /* Start with opacity set to 0 (completely transparent) */
-  animation: fadeIn 2s ease-in-out forwards; /* Define the animation */
+  animation: fadeIn 1s ease-in-out forwards; /* Define the animation */
 }
 
 @keyframes fadeIn {
