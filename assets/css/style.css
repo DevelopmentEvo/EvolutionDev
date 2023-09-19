@@ -11,7 +11,7 @@
 /* Navbar links */
 #navbar a {
   color: white; /* Text color for the links */
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   padding: 10px 20px;
   transition: color 0.3s ease; /* Smooth color transition on hover */
